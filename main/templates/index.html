@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Jayalekshmi S Nair | Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="green-text">PORTFOLIO / 2026</p>
+
+        <h1>
+            Hello, I'm<br>
+            Jayalekshmi <span>S Nair.</span>
+        </h1>
+
+        <h2>Python Developer & Data Science Enthusiast</h2>
+
+        <p class="hero-description">
+            A Computer Science graduate passionate about building
+            software applications and transforming data into
+            meaningful insights. Interested in Python, Django,
+            Data Science and Artificial Intelligence.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">Explore My Work ↗️</a>
+            <a href="#contact" class="btn-outline">Get In Touch</a>
+        </div>
+
+        <div class="social-links">
+            <a href="https://github.com/jayalekshminair80-png" target="_blank">GitHub ↗️</a>
+            <a href="https://www.linkedin.com/in/jayalekshmi-s-n/" target="_blank">LinkedIn ↗️</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{% static 'images/profile.jpeg' %}" alt="Jayalekshmi S Nair">
+    </div>
+</section>
+
+<section class="section" id="about">
+    <p class="green-text">01 / INTRODUCTION</p>
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-content">
+        <p>
+            I am a B.Tech graduate in Computer Science from Kottayam
+            Institute of Technology & Science, affiliated with APJ
+            Abdul Kalam Technological University.
+
+            I am passionate about Data Science and Software Development,
+            with an interest in Python, data analytics, machine learning
+            and data visualization.
+
+            I enjoy solving real-world problems through data-driven
+            approaches and continuously improving my technical skills.
+            I am currently seeking entry-level opportunities where I can
+            learn, contribute and grow as an engineer.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <p class="green-text">02 / EXPERTISE</p>
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="card-grid">
+        <div class="card">
+            <h3>01. Programming</h3>
+            <p>Python</p>
+            <p>JavaScript — Basic</p>
+            <p>C — Basic</p>
+        </div>
+
+        <div class="card">
+            <h3>02. Web Development</h3>
+            <p>Django</p>
+            <p>HTML</p>
+            <p>CSS</p>
+        </div>
+
+        <div class="card">
+            <h3>03. Data Analytics</h3>
+            <p>Pandas</p>
+            <p>NumPy</p>
+            <p>Advanced Excel</p>
+            <p>Power BI</p>
+        </div>
+
+        <div class="card">
+            <h3>04. Database</h3>
+            <p>MySQL</p>
+            <p>SQLite</p>
+        </div>
+
+        <div class="card">
+            <h3>05. GUI Development</h3>
+            <p>Tkinter</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="experience">
+    <p class="green-text">03 / PROFESSIONAL JOURNEY</p>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>Data Science & AI Intern</h3>
+            <h4>SCOPE INDIA</h4>
+            <p>July 2026 — Present</p>
+            <p>Trivandrum, Kerala</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Python Intern</h3>
+            <h4>RISS Technologies</h4>
+            <p>September 2025 — February 2026</p>
+            <p>Kochi, Kerala</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Python and Data Science Intern</h3>
+            <h4>SCOPE INDIA</h4>
+            <p>July 2024 — August 2024</p>
+            <p>Trivandrum, Kerala</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="education">
+    <p class="green-text">04 / ACADEMIC BACKGROUND</p>
+    <h2 class="section-title">Education</h2>
+
+    <div class="card education-card">
+        <p class="green-text">2022 — 2026</p>
+        <h3>Bachelor of Technology</h3>
+        <h4>Computer Science</h4>
+        <p>Kottayam Institute of Technology & Science</p>
+        <p>APJ Abdul Kalam Technological University</p>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <p class="green-text">05 / SELECTED WORK</p>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card-grid">
+
+        <div class="card project-card">
+            <p class="project-number">PROJECT / 01</p>
+            <h3>BankEase</h3>
+            <h4>Smart Banking System</h4>
+            <p>
+                A Django-based banking web application designed
+                to simplify digital banking and provide a convenient
+                platform for managing banking activities.
+            </p>
+            <span>Python · Django · HTML · CSS · SQLite</span>
+            <p class="project-status">Currently in development</p>
+        </div>
+
+        <div class="card project-card">
+            <p class="project-number">PROJECT / 02</p>
+            <h3>PulsePoint</h3>
+            <h4>Healthcare Appointment System</h4>
+            <p>
+                A healthcare web application that allows users
+                to explore medical services, find doctors and
+                request appointments.
+            </p>
+            <span>Python · Django · HTML · CSS · SQLite</span>
+            <p class="project-status">Currently in development</p>
+        </div>
+
+        <div class="card project-card">
+            <p class="project-number">PROJECT / 03</p>
+            <h3>CopDesk</h3>
+            <h4>PoliceConnect</h4>
+            <p>
+                A digital complaint management system that helps
+                citizens submit complaints, select their locality
+                and track complaint status.
+            </p>
+            <span>Python · Django · HTML · CSS · SQLite</span>
+            <p class="project-status">Currently in development</p>
+        </div>
+
+        <div class="card project-card">
+            <p class="project-number">PROJECT / 04</p>
+            <h3>Sales & Revenue Analytics</h3>
+            <h4>Data Analytics System</h4>
+            <p>
+                A data analytics project focused on managing,
+                analyzing and visualizing sales and revenue data.
+            </p>
+            <span>Python · Tkinter · MySQL · Excel · Power BI</span>
+            <p class="project-status">Currently in development</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="certifications">
+    <p class="green-text">06 / ACHIEVEMENTS</p>
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>GenAI Powered Data Analytics Job Simulation</h3>
+            <p>Forage</p>
+            <p>Certificate of Completion</p>
+            <p>November 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Python & Data Science</h3>
+            <p>Suffix E Solutions</p>
+            <p>Certificate of Completion</p>
+            <p>August 2024</p>
+        </div>
+
+        <div class="card">
+            <h3>Advanced Excel and Power BI</h3>
+            <p>Suffix E Solutions</p>
+            <p>Certificate of Completion</p>
+            <p>September 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Marketing Workshop</h3>
+            <p>Core Institute of Technology, Kottayam</p>
+            <p>Certificate of Completion</p>
+            <p>February 2025</p>
+        </div>
+
+        <div class="card">
+            <h3>Academic Internship in Python</h3>
+            <p>RISS Technologies</p>
+            <p>Certificate of Completion</p>
+            <p>February 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Rail Safe Park — Project Completion</h3>
+            <p>RISS Technologies</p>
+            <p>Certificate of Completion</p>
+            <p>February 2026</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <p class="green-text">07 / CONTACT</p>
+    <h2 class="section-title">Let's Connect.</h2>
+
+    <p class="contact-description">
+        I am interested in connecting with professionals,
+        exploring opportunities and discussing ideas.
+        Feel free to reach out.
+    </p>
+
+    <div class="contact-card">
+
+        <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:jayalekshmisnair121@gmail.com">
+                jayalekshmisnair121@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>Phone</h3>
+            <a href="tel:9645601965">9645601965</a>
+        </div>
+
+        <div class="contact-item">
+            <h3>Location</h3>
+            <p>Trivandrum, Kerala, India</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/jayalekshmi-s-n/" target="_blank">
+                View LinkedIn Profile ↗️
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>GitHub</h3>
+            <a href="https://github.com/jayalekshminair80-png" target="_blank">
+                Explore GitHub ↗️
+            </a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
