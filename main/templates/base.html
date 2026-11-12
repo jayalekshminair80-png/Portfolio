@@ -1,10 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Jayalekshmi | Portfolio{% endblock %}</title>
+    <meta name="description" content="Portfolio of Jayalekshmi S Nair - Python Developer & Data Science Enthusiast. Explore projects, skills, experience and certifications.">
+    <title>{% block title %}Jayalekshmi S Nair | Python Developer & Data Science Enthusiast{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
@@ -12,23 +23,90 @@
     <header class="navbar">
         <a href="{% url 'home' %}" class="logo">Jayalekshmi<span>.</span></a>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="navbar-right">
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="{% static 'files/resume.pdf' %}" target="_blank" class="nav-resume-btn" title="View & Download Resume">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Resume</span>
+                </a>
+
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle light or dark theme" title="Toggle theme">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+                </button>
+
+                <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <footer>
         <p>© 2026 Jayalekshmi S Nair. All Rights Reserved.</p>
-        <p>Designed with passion and creativity.</p>
+        <p>Built with Python, Django & Passion for Clean Engineering.</p>
     </footer>
 
+    <!-- Interactive Scripts -->
+    <script>
+        (function() {
+            // Theme Toggle Logic
+            const toggleBtn = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const html = document.documentElement;
+
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                themeIcon.className = 'fa-solid fa-moon';
+            } else {
+                document.body.classList.remove('light-theme');
+                themeIcon.className = 'fa-solid fa-sun';
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                const isLight = document.body.classList.toggle('light-theme');
+                const newTheme = isLight ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeIcon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+            });
+
+            // Mobile Navigation Toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileBtn && navMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    navMenu.classList.toggle('mobile-open');
+                    const isOpen = navMenu.classList.contains('mobile-open');
+                    mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+                });
+
+                // Close mobile menu when a nav link is clicked
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('mobile-open');
+                        mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                    });
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

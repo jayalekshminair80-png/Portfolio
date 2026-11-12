@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Jayalekshmi S Nair | Portfolio{% endblock %}
+{% block title %}Jayalekshmi S Nair | Python Developer & Data Science Enthusiast{% endblock %}
 
 {% block content %}
 
+<!-- Hero Section -->
 <section class="hero" id="home">
     <div class="hero-content">
+        <div class="availability-badge">
+            <span class="status-dot"></span>
+            <span>Available for Opportunities & Entry-Level Roles</span>
+        </div>
+
         <p class="green-text">PORTFOLIO / 2026</p>
 
         <h1>
@@ -17,133 +23,214 @@
         <h2>Python Developer & Data Science Enthusiast</h2>
 
         <p class="hero-description">
-            A Computer Science graduate passionate about building
-            software applications and transforming data into
-            meaningful insights. Interested in Python, Django,
-            Data Science and Artificial Intelligence.
+            A Computer Science graduate passionate about building robust
+            software applications and transforming raw data into
+            actionable insights. Focused on Python, Django, Data Analytics,
+            Machine Learning, and Artificial Intelligence.
         </p>
 
         <div class="hero-buttons">
-            <a href="#projects" class="btn">Explore My Work ↗️</a>
-            <a href="#contact" class="btn-outline">Get In Touch</a>
+            <a href="{% static 'files/resume.pdf' %}" target="_blank" class="btn" title="Download Resume">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>Download Resume</span>
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore My Work</span>
+            </a>
+            <a href="#contact" class="btn-outline">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Get In Touch</span>
+            </a>
         </div>
 
         <div class="social-links">
-            <a href="https://github.com/jayalekshminair80-png" target="_blank">GitHub ↗️</a>
-            <a href="https://www.linkedin.com/in/jayalekshmi-s-n/" target="_blank">LinkedIn ↗️</a>
+            <a href="https://github.com/jayalekshminair80-png" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/jayalekshmi-s-n/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:jayalekshmisnair121@gmail.com">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email</span>
+            </a>
         </div>
     </div>
 
     <div class="hero-image">
-        <img src="{% static 'images/profile.jpeg' %}" alt="Jayalekshmi S Nair">
+        <div class="hero-image-wrapper">
+            <img src="{% static 'images/profile.jpeg' %}" alt="Jayalekshmi S Nair - Python Developer">
+        </div>
     </div>
 </section>
 
+<!-- About Section -->
 <section class="section" id="about">
     <p class="green-text">01 / INTRODUCTION</p>
     <h2 class="section-title">About Me</h2>
 
-    <div class="about-content">
-        <p>
-            I am a B.Tech graduate in Computer Science from Kottayam
-            Institute of Technology & Science, affiliated with APJ
-            Abdul Kalam Technological University.
+    <div class="about-card">
+        <div class="about-content">
+            <p>
+                I am a B.Tech graduate in Computer Science from Kottayam
+                Institute of Technology & Science, affiliated with APJ
+                Abdul Kalam Technological University.
+            </p>
+            <p>
+                I am deeply passionate about Data Science and Software Development,
+                with practical interests across Python engineering, exploratory data analytics,
+                machine learning workflows, and interactive data visualization.
+            </p>
+            <p>
+                I thrive on solving real-world challenges through clean, data-driven
+                approaches and continually staying ahead with modern engineering practices.
+                I am currently seeking full-time entry-level opportunities where I can
+                contribute immediately, innovate, and grow as an impactful engineer.
+            </p>
+        </div>
 
-            I am passionate about Data Science and Software Development,
-            with an interest in Python, data analytics, machine learning
-            and data visualization.
-
-            I enjoy solving real-world problems through data-driven
-            approaches and continuously improving my technical skills.
-            I am currently seeking entry-level opportunities where I can
-            learn, contribute and grow as an engineer.
-        </p>
+        <div class="about-highlights">
+            <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="highlight-text">
+                    <h4>B.Tech in CSE</h4>
+                    <p>Class of 2026</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="highlight-text">
+                    <h4>3+ Internships</h4>
+                    <p>Data Science & Python</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="highlight-text">
+                    <h4>Core Stack</h4>
+                    <p>Python · Django · SQL · Power BI</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="highlight-text">
+                    <h4>Location</h4>
+                    <p>Trivandrum / Open to Relocate</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- Technical Skills Section -->
 <section class="section" id="skills">
     <p class="green-text">02 / EXPERTISE</p>
     <h2 class="section-title">Technical Skills</h2>
 
     <div class="card-grid">
         <div class="card">
-            <h3>01. Programming</h3>
-            <p>Python</p>
-            <p>JavaScript — Basic</p>
-            <p>C — Basic</p>
+            <h3><i class="fa-solid fa-terminal"></i> 01. Programming</h3>
+            <div class="skill-tags">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">JavaScript — Basic</span>
+                <span class="skill-pill">C — Basic</span>
+            </div>
         </div>
 
         <div class="card">
-            <h3>02. Web Development</h3>
-            <p>Django</p>
-            <p>HTML</p>
-            <p>CSS</p>
+            <h3><i class="fa-solid fa-globe"></i> 02. Web Development</h3>
+            <div class="skill-tags">
+                <span class="skill-pill">Django</span>
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3</span>
+            </div>
         </div>
 
         <div class="card">
-            <h3>03. Data Analytics</h3>
-            <p>Pandas</p>
-            <p>NumPy</p>
-            <p>Advanced Excel</p>
-            <p>Power BI</p>
+            <h3><i class="fa-solid fa-chart-line"></i> 03. Data Analytics</h3>
+            <div class="skill-tags">
+                <span class="skill-pill">Pandas</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">Advanced Excel</span>
+                <span class="skill-pill">Power BI</span>
+            </div>
         </div>
 
         <div class="card">
-            <h3>04. Database</h3>
-            <p>MySQL</p>
-            <p>SQLite</p>
+            <h3><i class="fa-solid fa-database"></i> 04. Database</h3>
+            <div class="skill-tags">
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">SQLite</span>
+            </div>
         </div>
 
         <div class="card">
-            <h3>05. GUI Development</h3>
-            <p>Tkinter</p>
+            <h3><i class="fa-solid fa-window-maximize"></i> 05. GUI Development</h3>
+            <div class="skill-tags">
+                <span class="skill-pill">Tkinter</span>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Experience Section -->
 <section class="section" id="experience">
     <p class="green-text">03 / PROFESSIONAL JOURNEY</p>
     <h2 class="section-title">Experience</h2>
 
     <div class="timeline">
-
         <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> July 2026 — Present</span>
+                <span class="timeline-status-badge">Current Role</span>
+            </div>
             <h3>Data Science & AI Intern</h3>
-            <h4>SCOPE INDIA</h4>
-            <p>July 2026 — Present</p>
-            <p>Trivandrum, Kerala</p>
+            <h4><i class="fa-solid fa-building"></i> SCOPE INDIA</h4>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Trivandrum, Kerala</p>
         </div>
 
         <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> September 2025 — February 2026</span>
+            </div>
             <h3>Python Intern</h3>
-            <h4>RISS Technologies</h4>
-            <p>September 2025 — February 2026</p>
-            <p>Kochi, Kerala</p>
+            <h4><i class="fa-solid fa-building"></i> RISS Technologies</h4>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Kochi, Kerala</p>
         </div>
 
         <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> July 2024 — August 2024</span>
+            </div>
             <h3>Python and Data Science Intern</h3>
-            <h4>SCOPE INDIA</h4>
-            <p>July 2024 — August 2024</p>
-            <p>Trivandrum, Kerala</p>
+            <h4><i class="fa-solid fa-building"></i> SCOPE INDIA</h4>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Trivandrum, Kerala</p>
         </div>
-
     </div>
 </section>
 
+<!-- Education Section -->
 <section class="section" id="education">
     <p class="green-text">04 / ACADEMIC BACKGROUND</p>
     <h2 class="section-title">Education</h2>
 
     <div class="card education-card">
-        <p class="green-text">2022 — 2026</p>
+        <div class="education-badge">
+            <i class="fa-regular fa-calendar-check"></i> 2022 — 2026
+        </div>
         <h3>Bachelor of Technology</h3>
-        <h4>Computer Science</h4>
-        <p>Kottayam Institute of Technology & Science</p>
-        <p>APJ Abdul Kalam Technological University</p>
+        <h4>Computer Science and Engineering</h4>
+        <div class="education-details">
+            <p><i class="fa-solid fa-university"></i> Kottayam Institute of Technology & Science</p>
+            <p><i class="fa-solid fa-award"></i> APJ Abdul Kalam Technological University</p>
+        </div>
     </div>
 </section>
 
+<!-- Projects Section -->
 <section class="section" id="projects">
     <p class="green-text">05 / SELECTED WORK</p>
     <h2 class="section-title">Projects</h2>
@@ -151,150 +238,191 @@
     <div class="card-grid">
 
         <div class="card project-card">
-            <p class="project-number">PROJECT / 01</p>
+            <p class="project-number"><i class="fa-solid fa-code-branch"></i> PROJECT / 01</p>
             <h3>BankEase</h3>
             <h4>Smart Banking System</h4>
             <p>
-                A Django-based banking web application designed
-                to simplify digital banking and provide a convenient
-                platform for managing banking activities.
+                A comprehensive Django-based banking web application designed
+                to simplify digital transactions, secure customer data, and provide
+                an intuitive portal for managing day-to-day banking activities.
             </p>
-            <span>Python · Django · HTML · CSS · SQLite</span>
-            <p class="project-status">Currently in development</p>
+            <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">SQLite</span>
+            </div>
+            <p class="project-status"><span class="pulse-beacon"></span> In active development</p>
         </div>
 
         <div class="card project-card">
-            <p class="project-number">PROJECT / 02</p>
+            <p class="project-number"><i class="fa-solid fa-code-branch"></i> PROJECT / 02</p>
             <h3>PulsePoint</h3>
             <h4>Healthcare Appointment System</h4>
             <p>
-                A healthcare web application that allows users
-                to explore medical services, find doctors and
-                request appointments.
+                A patient-centric healthcare platform enabling individuals
+                to discover verified doctors, explore hospital specialties,
+                and book and track medical consultation appointments seamlessly.
             </p>
-            <span>Python · Django · HTML · CSS · SQLite</span>
-            <p class="project-status">Currently in development</p>
+            <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">SQLite</span>
+            </div>
+            <p class="project-status"><span class="pulse-beacon"></span> In active development</p>
         </div>
 
         <div class="card project-card">
-            <p class="project-number">PROJECT / 03</p>
+            <p class="project-number"><i class="fa-solid fa-code-branch"></i> PROJECT / 03</p>
             <h3>CopDesk</h3>
             <h4>PoliceConnect</h4>
             <p>
-                A digital complaint management system that helps
-                citizens submit complaints, select their locality
-                and track complaint status.
+                A civic-tech complaint management portal allowing citizens to lodge
+                grievances, tag corresponding jurisdictions, and monitor police station
+                investigation status in real time with high transparency.
             </p>
-            <span>Python · Django · HTML · CSS · SQLite</span>
-            <p class="project-status">Currently in development</p>
+            <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">SQLite</span>
+            </div>
+            <p class="project-status"><span class="pulse-beacon"></span> In active development</p>
         </div>
 
         <div class="card project-card">
-            <p class="project-number">PROJECT / 04</p>
+            <p class="project-number"><i class="fa-solid fa-code-branch"></i> PROJECT / 04</p>
             <h3>Sales & Revenue Analytics</h3>
             <h4>Data Analytics System</h4>
             <p>
-                A data analytics project focused on managing,
-                analyzing and visualizing sales and revenue data.
+                An enterprise data analytics dashboard engineered to extract, clean,
+                and analyze high-volume sales metrics, presenting key performance indicators
+                and revenue forecasting through interactive visualizations.
             </p>
-            <span>Python · Tkinter · MySQL · Excel · Power BI</span>
-            <p class="project-status">Currently in development</p>
+            <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Tkinter</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">Power BI</span>
+            </div>
+            <p class="project-status"><span class="pulse-beacon"></span> In active development</p>
         </div>
 
     </div>
 </section>
 
+<!-- Certifications Section -->
 <section class="section" id="certifications">
-    <p class="green-text">06 / ACHIEVEMENTS</p>
+    <p class="green-text">06 / ACHIEVEMENTS & CREDENTIALS</p>
     <h2 class="section-title">Certifications</h2>
 
     <div class="card-grid">
 
-        <div class="card">
-            <h3>GenAI Powered Data Analytics Job Simulation</h3>
-            <p>Forage</p>
-            <p>Certificate of Completion</p>
-            <p>November 2026</p>
+        <div class="card cert-card">
+            <div class="cert-body">
+                <h3><i class="fa-solid fa-certificate"></i> GenAI Powered Data Analytics Job Simulation</h3>
+                <p class="cert-issuer">Forage</p>
+                <p class="cert-type">Certificate of Completion</p>
+                <p class="cert-date"><i class="fa-regular fa-calendar"></i> November 2026</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Python & Data Science</h3>
-            <p>Suffix E Solutions</p>
-            <p>Certificate of Completion</p>
-            <p>August 2024</p>
+        <div class="card cert-card">
+            <div class="cert-body">
+                <h3><i class="fa-solid fa-certificate"></i> Python & Data Science</h3>
+                <p class="cert-issuer">Suffix E Solutions</p>
+                <p class="cert-type">Certificate of Completion</p>
+                <p class="cert-date"><i class="fa-regular fa-calendar"></i> August 2024</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Advanced Excel and Power BI</h3>
-            <p>Suffix E Solutions</p>
-            <p>Certificate of Completion</p>
-            <p>September 2026</p>
+        <div class="card cert-card">
+            <div class="cert-body">
+                <h3><i class="fa-solid fa-certificate"></i> Advanced Excel and Power BI</h3>
+                <p class="cert-issuer">Suffix E Solutions</p>
+                <p class="cert-type">Certificate of Completion</p>
+                <p class="cert-date"><i class="fa-regular fa-calendar"></i> September 2026</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Digital Marketing Workshop</h3>
-            <p>Core Institute of Technology, Kottayam</p>
-            <p>Certificate of Completion</p>
-            <p>February 2025</p>
+        <div class="card cert-card">
+            <div class="cert-body">
+                <h3><i class="fa-solid fa-certificate"></i> Digital Marketing Workshop</h3>
+                <p class="cert-issuer">Core Institute of Technology, Kottayam</p>
+                <p class="cert-type">Certificate of Completion</p>
+                <p class="cert-date"><i class="fa-regular fa-calendar"></i> February 2025</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Academic Internship in Python</h3>
-            <p>RISS Technologies</p>
-            <p>Certificate of Completion</p>
-            <p>February 2026</p>
+        <div class="card cert-card">
+            <div class="cert-body">
+                <h3><i class="fa-solid fa-certificate"></i> Academic Internship in Python</h3>
+                <p class="cert-issuer">RISS Technologies</p>
+                <p class="cert-type">Certificate of Completion</p>
+                <p class="cert-date"><i class="fa-regular fa-calendar"></i> February 2026</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Rail Safe Park — Project Completion</h3>
-            <p>RISS Technologies</p>
-            <p>Certificate of Completion</p>
-            <p>February 2026</p>
+        <div class="card cert-card">
+            <div class="cert-body">
+                <h3><i class="fa-solid fa-certificate"></i> Rail Safe Park — Project Completion</h3>
+                <p class="cert-issuer">RISS Technologies</p>
+                <p class="cert-type">Certificate of Completion</p>
+                <p class="cert-date"><i class="fa-regular fa-calendar"></i> February 2026</p>
+            </div>
         </div>
 
     </div>
 </section>
 
+<!-- Contact Section -->
 <section class="section" id="contact">
     <p class="green-text">07 / CONTACT</p>
     <h2 class="section-title">Let's Connect.</h2>
 
     <p class="contact-description">
-        I am interested in connecting with professionals,
-        exploring opportunities and discussing ideas.
-        Feel free to reach out.
+        I am actively looking for exciting full-time roles, software engineering internships,
+        and data science opportunities. Whether you have an open position or simply want to connect,
+        my inbox is always open!
     </p>
 
     <div class="contact-card">
 
         <div class="contact-item">
-            <h3>Email</h3>
+            <h3><i class="fa-regular fa-envelope"></i> Email</h3>
             <a href="mailto:jayalekshmisnair121@gmail.com">
-                jayalekshmisnair121@gmail.com
+                jayalekshmisnair121@gmail.com ↗
             </a>
         </div>
 
         <div class="contact-item">
-            <h3>Phone</h3>
-            <a href="tel:9645601965">9645601965</a>
+            <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+            <a href="tel:9645601965">
+                +91 9645601965 ↗
+            </a>
         </div>
 
         <div class="contact-item">
-            <h3>Location</h3>
+            <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
             <p>Trivandrum, Kerala, India</p>
         </div>
 
         <div class="contact-item">
-            <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/jayalekshmi-s-n/" target="_blank">
-                View LinkedIn Profile ↗️
+            <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/jayalekshmi-s-n/" target="_blank" rel="noopener noreferrer">
+                View LinkedIn Profile ↗
             </a>
         </div>
 
         <div class="contact-item">
-            <h3>GitHub</h3>
-            <a href="https://github.com/jayalekshminair80-png" target="_blank">
-                Explore GitHub ↗️
+            <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+            <a href="https://github.com/jayalekshminair80-png" target="_blank" rel="noopener noreferrer">
+                Explore GitHub Repositories ↗
             </a>
         </div>
 
